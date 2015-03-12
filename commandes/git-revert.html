@@ -1,29 +1,110 @@
 <!DOCTYPE HTML>
 <head>
-	<title>Nom de la commande</title>
+	<title>git revert</title>
 	<meta charset="UTF-8">
-	<link href="css/commandes.css" rel="stylesheet" type"text/css">
+	<link href="../css/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-	<nav>
-		<p href="./index.html">Menu</p>
-	</nav>
-	<h1 id="titreCommande">Nom de la commande</h1>
+	<div id="titre"> 
+            <h1> <a href="../index.html"> <img src="../images/logo.png" alt="logo" > </img> </a> <br>Le fantastique guide de Git</h1>
+    </div>
+        <div id="nav">
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Accueil</a></li>
+                    </ul>
+                </nav>
+        </div>
+		
+	<div id="corps">
+	<h3 id="titreCommande">git revert</h3>
+	
 	<section class="descriptif">
-		<p>Descriptif de la commande d�taill�</p>
+		<p>La commande permet de rétablir des commits déjà éxistant. Elle sert donc
+		à "remonter le temps" et annuler l'effet de certains commit précédemment fait
+		En réalité, la commande ne supprime pas le commit choisit mais créé un commit automatique sans
+		les modifications du commit choisit, à ne pas confondre avec <i>git reset</i>.
+		Dans l'exemple, on fera un retour en arrière de 1 commit.</p>
+
 	</section>
 	
 	<section id="affichage">
-		<h2>Syntaxe</h2>
+		<h4>Syntaxe :</h4>
+			<code>git revert</code>
+		<h4>Affichage</h4>
+			<code>git revert HEAD</code>
+		
+			<div class="code">		
+			<code>git revert HEAD<br>
+			[choisir le nom du commit] <br><br>
+			
+			git log <br>
+			commit ...<br>
+			Author: x<br>
+			Date: YY<br>
+				Le commit revert</code>
+			</div>
+	<section/>
+	
+	
+	<h3 id="titreCommande">git revert -e</h3>
+	
+	<section class="descriptif">
+		<p>Cette commande permet d'éditer le nouveau commit qui "supprimera" le commit choisit.
+		La fonction <i>-e</i> ou <i>--edit</i> est l'option par defaut dans un terminal. </p>
+
 	</section>
-	<section class="exemple">
-		<p>Ecrire ici la commande</p>
-		<h2>Affichage</h2>
-		<p>Exemple de l'affichage de la commande dnas le terminal</p>
+	
+	<section id="affichage">
+		<h4>Syntaxe</h4>
+			<code>git revert -e</code>
+		<h4>Affichage</h4>
+			<div class="code">
+			<code>git revert -e HEAD<br>
+			[choisir le nom du commit] <br><br>
+			
+			git log <br>
+			commit ...<br>
+			Author: x<br>
+			Date: YY<br>
+				Le commit revert</code>
+			</div>
+			
+				<h3 id="titreCommande">git revert -n</h3>
+	
+	<section class="descriptif">
+		<p>Normalement la commande git revert crée automatiquement un commit dont le message renseigne le(s) commit annulé(s). Ici, on annule effectivement les commit désirés dans le répertoire git, mais on ne crée pas de nouveau commit.</p>
+
 	</section>
+	
+	<section id="affichage">
+		<h4>Syntaxe :</h4>
+			<code>git revert -n</code>
+		<h4>Affichage</h4>
+		
+		
+			<div class="code">		
+			<code>commit b166a65027383c626bbfea7f8bbbf50e4b5d24f7<br>
+			Author: Utilisateur <user@lubuntu-13.04><br>
+			Date:   Thu Mar 12 14:18:04 2015 +0100<br><br>
+
+			Revert "Commit à revert"<br><br>
+	
+			This reverts commit 7ecb55bfab82fa105c68d72b61cef11694c28a1d.<br><br>
+
+			commit 7ecb55bfab82fa105c68d72b61cef11694c28a1d<br><br>
+			Author: Utilisateur <user@lubuntu-13.04><br>
+			Date:   Thu Mar 12 14:16:24 2015 +0100<br><br>
+
+			Commit à revert</code>
+			</div>
+	</section>
+	
+	
+	</div>
 	<footer>		
-		<p>Git Manual - Par Nom Utilisateur</p>
+		<p> © Groupe d'IN202 2014-2015 UVSQ - Par Yobero, pierre-cauletUVSQ</p>
 	</footer>
 	
 </body>

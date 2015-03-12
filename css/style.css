@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+@@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
 
 /* body */
 body{	
@@ -96,34 +96,6 @@ nav li:hover .subnav {
 	padding-left: 25px;
 	padding-top: 25px;
 }
-/*animation*/
-@keyframes titrehover
-{
-	
-	50%{
-	color:#95a5a6;
-	}
-	100%{
-	color:#7f8c8d;
-	}
-}
-@-webkit-keyframes titrehover{	
-
-	50%{
-	color:#95a5a6;
-	}
-	100%{
-	color:#7f8c8d;
-	}
-}
-@-moz-keyframes titrehover{
-	50%{
-	color:#95a5a6;
-	}
-	100%{
-	color:#7f8c8d;
-	}
-}
 /* titre page */
 h1{
 	
@@ -144,9 +116,17 @@ h1{
 }
 
 #corps a{
-	animation: titrehover 5s infinite alternate;
-	-webkit-animation: titrehover 5s infinite alternate;
-	-moz-animation: titrehover 5s infinite alternate;
+	text-decoration:none;
+	color: blue;
+	
+}
+#corps a:hover{
+	text-decoration: none;
+	color: orange;
+	}
+#corps a:visited{
+	text-decoration: none;
+	color: blue;
 }
 #corps h3{
 
@@ -195,4 +175,37 @@ footer p{
 #titre a {
 	text-decoration: none;
 	}
-
+#commandescorps{
+	background-color: white ;
+	margin-left: 10%;
+	margin-right: 10%;
+	border-bottom: dashed 3px orange;
+	border-top: dashed 3px orange;
+	border-left: solid 3px;
+	border-right:solid 3px;
+	border-color: #2980b9;
+	padding-bottom: 5px;
+	padding-right: 25px;
+	padding-left: 25px;
+	padding-top: 25px;
+}
+.liste_commandes{ 
+	padding-left: 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	}
+.liste_commandes:hover, .liste_commandes a:hover{
+	
+	border-radius: 5px;
+	color: red;
+	}
+.liste_commandes li:hover{
+	background-color:rgba(165, 165, 165, 0.5);}
+	 
+.liste_commandes a{
+	color: black;
+	text-decoration: none;
+	}
+.liste_commandes:hover{
+background-color: rgba(165, 165, 165, 0.5);
+}

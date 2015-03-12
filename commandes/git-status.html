@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<head>
+    <title>git status</title>
+    <meta charset="UTF-8">
+    <link href="../css/style.css" rel="stylesheet" type"text/css">
+</head>
+
+<body>
+	<div id="titre"> 
+			<h1> <a href="../index.html"> <img src="../images/logo.png" alt="logo" > </img> </a> <br>Le fantastique guide de Git</h1>
+	</div>
+		<div id="nav">
+			<nav>
+				<ul>
+					<li class="nolastmen"><a href="../index.html">Accueil</a></li>
+					<li><a href="../commandes.html">Commandes Git</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+<div id="corps">
+    <h3 id="titreCommande">git status</h3>
+
+    <section class="descriptif">
+        <p>Il s'agit de la commande principale permettant de connaitre l'état des fichiers dans le dépot Git.</p>
+
+    </section>
+
+    <section class="affichage">
+        <h4>Syntaxe</h4>
+           <div class="code"> <code>git status</code> </div>
+        <h4>Affichage</h4>
+          <div class="code">  <code>$ nano a.txt  <br>
+$ git status
+On branch master
+Untracked files:
+  (use "git add file..." to include in what will be committed)
+
+        a.txt
+
+nothing added to commit but untracked files present (use "git add" to track)</code></div>
+    <section/>
+    
+    <h3 id="titreCommande">git status -u</h3>
+
+    <section class="descriptif">
+        <p>Tout comme git status, cette commande indique l'état des fichiers dans le dépot Git, ainsi que les fichiers non suivis. On peut utiliser un certain nombre de paramètres (optionel, par défaut sur all) : no, normal ou all </p>
+
+    </section>
+
+    <section class="affichage">
+        <h4>Syntaxe</h4>
+          <div class="code"> <code>git status -u[paramètre]</code> </div>
+        <h4>Affichage</h4>
+          <div class="code">  <code> nano a.txt
+git status -uno
+On branch master
+nothing to commit (use -u to show untracked files)</code> </div>
+    <section/>
+
+<h3 id="titreCommande">git status -b</h3>
+
+    <section class="descriptif">
+        <p>Tout comme git status, cette commande indique l'état des fichiers dans le dépot Git, ainsi que les branches du dépot (crées par les commit).</p>
+
+    </section>
+
+    <section class="affichage">
+        <h4>Syntaxe</h4>
+           <div class="code"> <code>git status -b</code> </div>
+        <h4>Affichage</h4>
+           <div class="code"> <code>git status -b 
+				On branch gh-pages <br>
+				Untracked files:<br>
+				(use "git add file..." to include in what will be committed) <br>
+
+				a.txt<br>
+				commandes/git-status.html <br>
+				nothing added to commit but untracked files present (use "git add" to track)<br>
+			</code>
+			
+			</div>
+			    </section>
+			</div>
+
+    
+    <footer>        
+        <p>© Groupe d'IN202 2014-2015 UVSQ - Par Pierre</p>
+    </footer>
+
+</body>

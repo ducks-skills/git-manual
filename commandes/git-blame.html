@@ -1,40 +1,77 @@
-<head>
-	<title>git blame</title>
-	<meta charset="UTF-8">
-	<link href="css/commandes.css" rel="stylesheet" type"text/css">
-</head>
+<html>
+    <head>
+        <title>Git Blame</title>
+        <meta charset="UTF-8">
+        <link href="../css/style.css" rel="stylesheet" type="text/css">
+		<link rel="icon" type="image/png"  href="../images/favicon.ico">
+    </head>
 
-<body>
-	<nav>
-		<p href="./index.html">Menu</p>
-	</nav>
-	
-	<h1 id="titreCommande">git blame -L</h1>
-	<section class="descriptif">
-		<p>Descriptif de la commande détaillé</p>
-		<h2>Syntaxe</h2>
-		<code></code>
-	</section>
-	<section class="exemple">
-		<p>Ecrire ici la commande</p>
-		<h2>Affichage</h2>
-		<code>Exemple de l'affichage de la commande dans le terminal<br/></code>
-	</section>
-	
-	<h1 id="titreCommande">git blame --reverse</h1>
-	<section class="descriptif">
-		<p>Descriptif de la commande détaillé</p>
-		<h2>Syntaxe</h2>
-		<code></code>
-	</section>
-	<section class="exemple">
-		<p>Ecrire ici la commande</p>
-		<h2>Affichage</h2>
-		<code>Exemple de l'affichage de la commande dans le terminal<br/></code>
-	</section>
-	
-	<footer>		
-		<p>Git Manual - Par Ylène ABOULFATH</p>
-	</footer>
-	
-</body>
+    <body>
+        <div id="titre"> 
+            <h1> <a href="../index.html"> <img src="../images/logo.png" alt="logo" > </img> </a> <br> Le fantastique guide de Git</h1>
+        </div>
+        <div id="nav">
+                <nav>
+                    <ul>
+                        <li ><a href="../index.html"> Accueil </a></li>
+                    </ul>
+                </nav>
+        </div>
+		
+        <div id="corps">
+		
+		<section class="descriptif">
+            <p> Cette commande va afficher les lignes d'un fichier et leur associer
+			    le dernier commit qui les concernes, afin de pouvoir comparer chaque
+				ligne, et trouver d'eventuels problèmes.</p>
+        </section>
+        <section class="affichage">
+            <h4>Syntaxe :</h4>
+                <code>$git blame nom_du_fichier </code>
+                <div class="code">
+                   <code>$ git blame exemple.html <br>
+				         a153f89d (Ylen96 2015-03-12 15:07:46 +0100 1) dossier X, Y et Z <br>
+						 1501d1d9 (Ylen96 2015-03-12 15:12:23 +0100 2) fichier exemple   <br>
+						 a153f89d (Ylen96 2015-03-12 15:07:46 +0100 3)                   <br>
+						 1501d1d9 (Ylen96 2015-03-12 15:12:23 +0100 4) 0782592389        <br></code>
+                </div>
+        </section>
+
+		
+		<h3 id="titreCommande"> git blame -L </h3>
+		<section class="descriptif">
+            <p>Description</p>
+            <!--Description de la commande -->
+        </section>
+        <section class="affichage">
+            <h4>Syntaxe :</h4>
+                <code>$git blame-L l.début,l.fin  nom_du_fichier</code>
+                <div class="code">
+                   <code>Exemple d'affichage dans le terminal</code>
+                </div>
+        </section>
+		
+		
+		<h3 id="titreCommande"> git blame --reverse</h3>
+		<section class="descriptif">
+            <p>Au lieu de montrer la révision dans laquelle une ligne est 
+			   apparu, la commande affiche la dernière version dans laquelle
+			   une ligne a existé. Ceci exige une gamme de révision comme le 
+			   DÉBUT.. LA FIN où le chemin pour blame existe dans le DÉBUT.</p>
+        </section>
+        <section class="affichage">
+            <h4>Syntaxe :</h4>
+                <code>git blame --reverse nom_du_fichier</code>
+                <div class="code">
+                   <code> dans le terminal</code>
+                </div>
+        </section>
+		
+		
+    </div>
+    <footer>
+    <p> © Groupe d'IN202 2014-2015 UVSQ - Par Aboulfath Ylène, Canal Mélanie, SuzanneAir</p>
+    </footer>
+    </body>
+
+</html>
